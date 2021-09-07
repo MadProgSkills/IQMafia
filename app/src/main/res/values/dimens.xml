@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="margin_half">8dp</dimen>
+    <dimen name="card_corner_radius">3dp</dimen>
+    <dimen name="card_corner_elevation">10dp</dimen>
+    <dimen name="text_large">25sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_mid">15sp</dimen>
+    <dimen name="text_falls_numbers">15sp</dimen>
+    <dimen name="text_chronometer">28sp</dimen>
+    <dimen name="label_height">30dp</dimen>
+    <dimen name="falls_width_butt">100dp</dimen>
+    <dimen name="falls_height_butt">45dp</dimen>
+    <dimen name="gep_height_butt">90dp</dimen>
+</resources>

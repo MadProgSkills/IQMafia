@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/night_fragment_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".judge.screens.night.NightFragment">
+
+    <fragment
+        android:id="@+id/timer_fragment"
+        android:name="ru.iqmafia.iqmafiaandroidapp.judge.fragments.timer.TimerFragment"
+        class="ru.iqmafia.iqmafiaandroidapp.judge.fragments.timer.TimerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_timer">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/falls_frag"
+        android:name="ru.iqmafia.iqmafiaandroidapp.judge.fragments.falls.FallsFragment"
+        class="ru.iqmafia.iqmafiaandroidapp.judge.fragments.falls.FallsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/my_border_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_fragment"
+        app:layout_constraintVertical_bias="0"
+        tools:layout="@layout/fragment_falls">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/vote_frag"
+        android:name="ru.iqmafia.iqmafiaandroidapp.judge.fragments.vote.VoteFragment"
+        class="ru.iqmafia.iqmafiaandroidapp.judge.fragments.vote.VoteFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/my_border_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_fragment"
+        tools:layout="@layout/fragment_vote">
+
+    </fragment>
+
+
+    <Button
+        android:id="@+id/night_bestmove_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:background="@drawable/my_border_blue"
+        android:text="@string/best_move"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold"
+        android:stateListAnimator="@drawable/button_animation"
+        app:layout_constraintEnd_toStartOf="@+id/falls_frag"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/vote_frag"
+        app:layout_constraintTop_toBottomOf="@id/timer_fragment"
+         />
+
+
+
+    <Button
+        android:id="@+id/night_redwin_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/my_border_red"
+        android:text="@string/red_win"
+        android:textColor="@color/colorCoolBlack"
+        android:textStyle="bold"
+        android:stateListAnimator="@drawable/button_animation"
+        app:layout_constraintStart_toEndOf="@id/vote_frag"
+        app:layout_constraintEnd_toStartOf="@+id/falls_frag"
+        app:layout_constraintTop_toBottomOf="@+id/night_bestmove_button" />
+
+    <Button
+        android:id="@+id/night_blackwin_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/my_border_black"
+        android:text="@string/black_win"
+        android:textColor="@color/colorCoolRed"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        android:stateListAnimator="@drawable/button_animation"
+        app:layout_constraintStart_toEndOf="@+id/vote_frag"
+        app:layout_constraintTop_toBottomOf="@+id/night_redwin_button"
+        app:layout_constraintEnd_toStartOf="@id/falls_frag"/>
+
+    <Button
+        android:id="@+id/night_start_new_game_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_standard"
+        android:background="@drawable/my_border_blue"
+        android:stateListAnimator="@drawable/button_animation"
+        android:text="@string/start_new_game"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/falls_frag"
+        app:layout_constraintEnd_toStartOf="@+id/falls_frag"
+        app:layout_constraintStart_toEndOf="@+id/vote_frag"
+        app:layout_constraintTop_toBottomOf="@+id/night_blackwin_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

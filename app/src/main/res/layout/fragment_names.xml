@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/names_root_constraint"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".judge.screens.names.NamesFragment">
+
+
+        <fragment
+            android:id="@+id/timer_fragment"
+            android:name="ru.iqmafia.iqmafiaandroidapp.judge.fragments.timer.TimerFragment"
+            class="ru.iqmafia.iqmafiaandroidapp.judge.fragments.timer.TimerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/scroll_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout="@layout/fragment_timer">
+
+        </fragment>
+
+        <ScrollView
+            android:id="@+id/scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timer_fragment">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/names_LinearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/my_border_white"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/falls_frag"
+                    app:layout_constraintStart_toEndOf="@+id/vote_frag"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/names_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/label_height"
+                        android:background="@drawable/my_border_white"
+                        android:text="@string/names"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_large" />
+
+                    <EditText
+                        android:id="@+id/names_name1_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/name_1"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/names_name2_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/name_2"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/names_name3_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/name_3"
+                        android:inputType=""
+                        android:paddingLeft="20dp"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/names_name4_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/name_4"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:selectAllOnFocus="false"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/names_name5_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/nane_5"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/names_name6_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/name_6"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/names_name7_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/name_7"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/names_name8_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/name_8"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:selectAllOnFocus="false"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/names_name9_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/name_9"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/names_name10_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@drawable/my_border_blue"
+                        android:ems="10"
+                        android:hint="@string/name_10"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <fragment
+                    android:id="@+id/falls_frag"
+                    android:name="ru.iqmafia.iqmafiaandroidapp.judge.fragments.falls.FallsFragment"
+                    class="ru.iqmafia.iqmafiaandroidapp.judge.fragments.falls.FallsFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/my_border_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    tools:layout="@layout/fragment_falls">
+
+                </fragment>
+
+                <fragment
+                    android:id="@+id/vote_frag"
+                    android:name="ru.iqmafia.iqmafiaandroidapp.judge.fragments.vote.VoteFragment"
+                    class="ru.iqmafia.iqmafiaandroidapp.judge.fragments.vote.VoteFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/my_border_white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout="@layout/fragment_vote">
+
+                </fragment>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

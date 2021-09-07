@@ -1,0 +1,85 @@
+<resources>
+
+    //MAIN
+    <integer name="com_vk_sdk_AppId">7064312</integer>
+
+
+    <string name="autentification">Autentification</string>
+    <string name="vk_auth">Auth by VK</string>
+    <string name="run_demo">Run Demo</string>
+
+
+    <string name="advert">Advert</string>
+    <string name="play">Play</string>
+    <string name="judge">Judge</string>
+    <string name="wiki">Wiki</string>
+    <string name="profile">Profile</string>
+
+
+    //JUDGE
+    <string name="get_slot">Get\nSlot</string>
+    <string name="end_game">End Game</string>
+    <string name="q">\?</string>
+    <string name="longreset">long click/nfor reset</string>
+    <string name="ten">10</string>
+    <string name="nine">9</string>
+    <string name="eight">8</string>
+    <string name="seven">7</string>
+    <string name="six">6</string>
+    <string name="five">5</string>
+    <string name="four">4</string>
+    <string name="three">3</string>
+    <string name="two">2</string>
+    <string name="one">1</string>
+    <string name="kill">kill</string>
+    <string name="res">reset</string>
+    <string name="result">Result</string>
+    <string name="start_new_game">start new game</string>
+    <string name="cards">cards</string>
+    <string name="players">players</string>
+    <string name="table">table</string>
+    <string name="hands">hands</string>
+    <string name="ow">0</string>
+    <string name="falls">falls</string>
+    <string name="start">start</string>
+    <string name="reset">reset</string>
+    <string name="pause">pause</string>
+    <string name="choose_your_destiny">Choose Your Destiny</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="vote_end">Vote End</string>
+    <string name="game_end">game end</string>
+    <string name="who_win">Who Win?</string>
+    <string name="select_black">Select Black Team</string>
+    <string name="select_sheriff">Select Sheriff</string>
+    <string name="select_card">Select Card</string>
+    <string name="select_don">Select Don</string>
+    <string name="reset_slots">Reset SLOTS?</string>
+    <string name="reset_cards">Reset CARDS?</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="best_move">Best Move</string>
+    <string name="names">Names</string>
+    <string name="vote">Vote</string>
+    <string name="name_10">Name 10</string>
+    <string name="name_9">Name 9</string>
+    <string name="name_8">Name 8</string>
+    <string name="name_7">Name 7</string>
+    <string name="name_6">Name 6</string>
+    <string name="nane_5">Name 5</string>
+    <string name="name_4">Name 4</string>
+    <string name="name_3">Name 3</string>
+    <string name="name_2">Name 2</string>
+    <string name="name_1">Name 1</string>
+    <string name="erase_this_shit_and_go_home">Erase This Shit And Go Home?</string>
+    <string name="red_win">Red Win</string>
+    <string name="black_win">Black Win</string>
+    <string name="don">Select Don</string>
+    <string name="sheriff">Select Sheriff</string>
+    <string name="confirm">Confirm!</string>
+    <string name="win">win</string>
+    <string name="rating">rate</string>
+    <string name="slot">№</string>
+    <string name="app_name">Iq Mafia</string>
+</resources>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/end_game_popup_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_border_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        //SELECT BLACK
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/gep_select_black_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_standard"
+            android:background="@drawable/my_border_white"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/gep_select_black_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/my_border_black"
+                android:text="@string/select_black"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/gep_select_black_1_5_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <Button
+                    android:id="@+id/gep_select_black_1_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/one"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_black_2_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/two"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_black_3_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/three"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_black_4_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/four"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_black_5_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/five"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/gep_select_black_6_10_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <Button
+                    android:id="@+id/gep_select_black_10_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/ten"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_black_9_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/nine"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_black_8_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/eight"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_black_7_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/seven"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_black_6_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/six"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        //SELECT DON
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/gep_select_don_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_standard"
+            android:background="@drawable/my_border_white"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gep_select_black_container">
+
+
+            <TextView
+                android:id="@+id/gep_select_don_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/my_border_black"
+                android:gravity="center"
+                android:stateListAnimator="@drawable/button_animation"
+                android:text="@string/don"
+                android:textColor="@color/colorCoolRed"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/gep_select_don_1_5_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <Button
+                    android:id="@+id/gep_select_don_1_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/one"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_don_2_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/two"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_don_3_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/three"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_don_4_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/four"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_don_5_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/five"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/gep_select_don_6_10_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <Button
+                    android:id="@+id/gep_select_don_10_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/ten"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_don_9_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/nine"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_don_8_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/eight"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_don_7_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/seven"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_don_6_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/six"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        //SELECT SHERIFF
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/gep_select_sheriff_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_standard"
+            android:background="@drawable/my_border_white"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gep_select_don_container">
+
+
+            <TextView
+                android:id="@+id/gep_select_sheriff_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/my_border_red"
+                android:gravity="center"
+                android:stateListAnimator="@drawable/button_animation"
+                android:text="@string/sheriff"
+                android:textColor="@color/colorCoolBlack"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/gep_select_sher_1_5_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <Button
+                    android:id="@+id/gep_select_sher_1_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/one"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_sher_2_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/two"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_sher_3_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/three"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_sher_4_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/four"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_sher_5_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/five"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/gep_select_sher_6_10_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <Button
+                    android:id="@+id/gep_select_sher_10_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/ten"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_sher_9_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/nine"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_sher_8_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/eight"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_sher_7_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/seven"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/gep_select_sher_6_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_border_white"
+                    android:stateListAnimator="@drawable/button_animation"
+                    android:text="@string/six"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <Button
+            android:id="@+id/gep_confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:layout_margin="@dimen/margin_half"
+            android:padding="@dimen/margin_standard"
+            android:gravity="center"
+            android:stateListAnimator="@drawable/button_animation"
+            android:text="@string/confirm"
+            android:textColor="@color/colorCoolBlack"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gep_select_sheriff_container"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

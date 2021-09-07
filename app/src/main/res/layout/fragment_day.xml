@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/day_fragment_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".judge.screens.day.DayFragment">
+
+
+    <fragment
+        android:id="@+id/timer_fragment"
+        android:name="ru.iqmafia.iqmafiaandroidapp.judge.fragments.timer.TimerFragment"
+        class="ru.iqmafia.iqmafiaandroidapp.judge.fragments.timer.TimerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/day_fragment_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_timer">
+
+    </fragment>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/day_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_fragment">
+
+        <fragment
+            android:id="@+id/falls_frag"
+            android:name="ru.iqmafia.iqmafiaandroidapp.judge.fragments.falls.FallsFragment"
+            class="ru.iqmafia.iqmafiaandroidapp.judge.fragments.falls.FallsFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/my_border_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/day_voting_players_linear"
+            app:layout_constraintVertical_bias="0"
+            tools:layout="@layout/fragment_falls">
+
+        </fragment>
+
+        <LinearLayout
+            android:id="@+id/day_voting_players_linear"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/my_border_white"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/day_voting_players_label_text"
+                style="@style/fragments_labels"
+                android:layout_width="match_parent"
+                android:text="@string/players" />
+
+            <Button
+                android:id="@+id/day_pl1_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_pl2_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_pl3_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_pl4_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_pl5_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_pl6_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_pl7_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_pl8_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_pl9_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_pl10_vote_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/my_border_blue"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/day_count_players_linear"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/my_border_white"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/day_voting_players_linear"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/day_result_label_text"
+                style="@style/fragments_labels"
+                android:layout_width="match_parent"
+                android:text="@string/table" />
+
+            <Button
+                android:id="@+id/day_count1_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_count2_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_count3_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_count4_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_count5_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_count6_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_count7_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_count8_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_count9_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_count10_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/my_border_white"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/day_result_linear"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/my_border_white"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/day_count_players_linear"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/day_result_text"
+                style="@style/fragments_labels"
+                android:layout_width="match_parent"
+                android:text="@string/hands" />
+
+            <Button
+                android:id="@+id/day_result0_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/ow"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_result1_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/one"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_result2_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/two"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_result3_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/three"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_result4_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/four"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_result5_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/five"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_result6_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/six"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_result7_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/seven"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_result8_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="1.5dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/eight"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <Button
+                android:id="@+id/day_result9_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/my_border_yellow"
+                android:text="@string/nine"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/day_vote_reset_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/my_border_blue"
+            android:text="@string/res"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            android:stateListAnimator="@drawable/button_animation"
+            app:layout_constraintEnd_toStartOf="@+id/falls_frag"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/day_result_linear"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/day_end_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_half"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:layout_marginEnd="@dimen/margin_half"
+            android:background="@drawable/my_border_blue"
+            android:text="@string/vote_end"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            android:stateListAnimator="@drawable/button_animation"
+            app:layout_constraintEnd_toStartOf="@+id/falls_frag"
+            app:layout_constraintStart_toEndOf="@+id/day_result_linear"
+            app:layout_constraintTop_toBottomOf="@+id/day_vote_reset_button" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

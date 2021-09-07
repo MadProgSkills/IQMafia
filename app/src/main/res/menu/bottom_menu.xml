@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/JudgeAct"
+        android:title="@string/judge"
+        android:icon="@drawable/ic_baseline_account_balance_24"
+        />
+
+    <item
+        android:id="@+id/AdvertAct"
+        android:title="@string/advert"
+        android:icon="@drawable/ic_baseline_place_24"
+        />
+
+    <item
+        android:id="@+id/PlayAct"
+        android:title="@string/play"
+        android:icon="@drawable/ic_baseline_sports_esports_24"
+        />
+    <item
+        android:id="@+id/WikiAct"
+        android:title="@string/wiki"
+        android:icon="@drawable/ic_baseline_school_24"
+        />
+    <item
+        android:id="@+id/ProfileAct"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_baseline_settings_24"
+        />
+</menu>

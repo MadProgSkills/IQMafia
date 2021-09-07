@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_reset_popup"
+    style="@style/popup_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/game_reset_popup_container"
+        style="@style/popup_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:layout_marginBottom="@dimen/margin_standard">
+
+        <TextView
+            android:id="@+id/game_reset_popup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_standard"
+            android:gravity="center|top"
+            android:paddingTop="@dimen/margin_standard"
+            android:text="@string/erase_this_shit_and_go_home"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/game_reset_popup_yes_button"
+            android:layout_width="@dimen/falls_width_butt"
+            android:layout_height="@dimen/falls_height_butt"
+            android:layout_margin="@dimen/margin_standard"
+            android:background="@drawable/my_border_white"
+            android:text="@string/yes"
+            android:stateListAnimator="@drawable/button_animation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/game_reset_popup_text" />
+
+        <Button
+            android:id="@+id/game_reset_popup_no_button"
+            android:layout_width="@dimen/falls_width_butt"
+            android:layout_height="@dimen/falls_height_butt"
+            android:layout_margin="@dimen/margin_standard"
+            android:background="@drawable/my_border_white"
+            android:text="@string/no"
+            android:stateListAnimator="@drawable/button_animation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/game_reset_popup_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

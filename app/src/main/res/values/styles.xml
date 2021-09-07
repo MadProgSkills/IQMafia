@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="fragments_labels">
+        <item name="android:layout_height">@dimen/label_height</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textSize">@dimen/text_mid</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/my_border_white</item>
+    </style>
+
+    <style name="popup_card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">120dp</item>
+        <item name="android:layout_marginBottom">120dp</item>
+        <item name="android:layout_marginStart">50dp</item>
+        <item name="android:layout_marginEnd">50dp</item>
+    </style>
+
+    <style name="recycler_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_mid</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/my_border_white</item>
+        <item name="android:padding">@dimen/margin_half</item>
+    </style>
+</resources>

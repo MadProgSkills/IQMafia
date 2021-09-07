@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/falls_root_linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/my_border_white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:id="@+id/falls_label_text"
+        android:layout_width="120dp"
+        android:text="@string/falls"
+        android:clickable="true"
+        android:focusable="true"
+        android:stateListAnimator="@drawable/button_animation"
+        style="@style/fragments_labels" />
+
+
+    <LinearLayout
+        android:id="@+id/fall_to_players_linear"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:orientation="horizontal"
+            android:layout_marginBottom="1.5dp">
+
+            <Button
+                android:id="@+id/falls_pl1_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:layout_marginEnd="0dp"
+                android:includeFontPadding="false"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl1_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/one"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:orientation="horizontal"
+            android:layout_marginBottom="1.5dp">
+
+            <Button
+                android:id="@+id/falls_pl2_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:layout_marginEnd="0dp"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl2_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/two"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal3"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:layout_marginBottom="1.5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/falls_pl3_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl3_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/three" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal4"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:layout_marginBottom="1.5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/falls_pl4_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl4_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/four" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal5"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:layout_marginBottom="1.5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/falls_pl5_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl5_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/five" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal6"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:layout_marginBottom="1.5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/falls_pl6_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl6_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/six"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal7"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:layout_marginBottom="1.5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/falls_pl7_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl7_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/seven" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal8"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:layout_marginBottom="1.5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/falls_pl8_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl8_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/eight"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal9"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:layout_marginBottom="1.5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/falls_pl9_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl9_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/nine"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/falls_horizontal10"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border_white"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/falls_pl10_fall_button"
+                android:layout_width="@dimen/falls_width_butt"
+                android:layout_height="@dimen/falls_height_butt"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:stateListAnimator="@drawable/button_animation"/>
+
+            <TextView
+                android:id="@+id/falls_pl10_name_text"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_falls_numbers"
+                android:text="@string/ten"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
