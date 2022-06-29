@@ -80,6 +80,13 @@
     <string name="confirm">Confirm!</string>
     <string name="win">win</string>
     <string name="rating">rate</string>
-    <string name="slot">№</string>
+    <string name="number">№</string>
     <string name="app_name">Iq Mafia</string>
+
+    <string name="stats">Tab</string>
+    <string name="day">Day</string>
+    <string name="card">Card</string>
+    <string name="slot">Slot</string>
+    <string name="end">End</string>
+
 </resources>

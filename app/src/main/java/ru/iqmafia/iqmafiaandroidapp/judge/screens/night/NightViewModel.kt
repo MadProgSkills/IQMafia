@@ -14,8 +14,8 @@ import ru.iqmafia.iqmafiaandroidapp.judge.models.CurrentGamePlayerModel
 class NightViewModel(application: Application) : AndroidViewModel(application) {
 
     private val mContext = application
-    private val mDao = IqDatabase.getInstance(mContext).getDao()
-    private val mRepo = JudgeRoomRepository(mDao)
+//    private val mDao = IqDatabase.getInstance(mContext).getDao()
+//    private val mRepo = JudgeRoomRepository(mDao)
 
     //WHO WIN
     private var _whoWinString = MutableLiveData<String>()
@@ -848,8 +848,8 @@ class NightViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun insertCurrentGamePlayer(player: CurrentGamePlayerModel, onSuccess: () -> Unit) =
         viewModelScope.launch(Dispatchers.IO) {
-            mRepo.insertCurrentGamePlayer(player) {
-                onSuccess()
-            }
+//            mRepo.insertCurrentGamePlayer(player) {
+//                onSuccess()
+//            }
         }
 }

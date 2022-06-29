@@ -8,8 +8,8 @@ import ru.iqmafia.iqmafiaandroidapp.judge.database.JudgeRoomRepository
 class StatsFragmentViewModel(application: Application): AndroidViewModel(application) {
 
     private val mContext = application
-    private val mDDao = IqDatabase.getInstance(mContext).getDao()
-    private val mRepo = JudgeRoomRepository(mDDao)
-
-    val listCurrentGamePlayerModel = mRepo.allPlayers
+//    private val mDDao = IqDatabase.getInstance(mContext).getDao()
+//    private val mRepo = JudgeRoomRepository(mDDao)
+//
+//    val listCurrentGamePlayerModel = mRepo.allPlayers
 }

@@ -58,7 +58,7 @@ class StatsFragment : Fragment() {
             val list = it
             mCurrentGameAdapter.setList(list)
         }
-        mStatsFragmentViewModel.listCurrentGamePlayerModel.observe(this, mObserverList)
+//        mStatsFragmentViewModel.listCurrentGamePlayerModel.observe(this, mObserverList)
     }
 
     fun popupClick(player: CurrentGamePlayerModel) {
@@ -79,7 +79,7 @@ class StatsFragment : Fragment() {
 
     override fun onDestroy() {
         _mBinding = null
-        mStatsFragmentViewModel.listCurrentGamePlayerModel.removeObserver(mObserverList)
+//        mStatsFragmentViewModel.listCurrentGamePlayerModel.removeObserver(mObserverList)
         mRecyclerView.adapter = null
         super.onDestroy()
     }
