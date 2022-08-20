@@ -6,10 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import ru.iqmafia.iqmafiaandroidapp.judge.models.CurrentGamePlayerModel
 
-@Database(entities = [CurrentGamePlayerModel::class
-//    , PlayerModel::class, CommonRatingModel::class
-    ]
-    , version = 1)
+@Database(entities = [CurrentGamePlayerModel::class], version = 1)
 abstract class IqDatabase : RoomDatabase() {
     abstract fun getDao(): JudgeDao
 

@@ -9,9 +9,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import ru.iqmafia.iqmafiaandroidapp.databinding.FragmentStatsBinding
 import ru.iqmafia.iqmafiaandroidapp.judge.JudgeActivity
 import ru.iqmafia.iqmafiaandroidapp.judge.models.CurrentGamePlayerModel
+import ru.iqmafia.iqmafiaandroidapp.judge.screeens.night.NightViewModel
 
 class StatsFragment : Fragment() {
 
@@ -25,7 +27,8 @@ class StatsFragment : Fragment() {
     private lateinit var mCurrentGameAdapter: StatsCurrentGameAdapter
     private lateinit var mObserverList: Observer<List<CurrentGamePlayerModel>>
 
-    private lateinit var mStatsFragmentViewModel: StatsFragmentViewModel
+    private lateinit var mStatsViewModel: StatsViewModel
+    private lateinit var mNightViewModel: NightViewModel
     private lateinit var mJudgeActivity: JudgeActivity
 
     override fun onAttach(context: Context) {
@@ -46,7 +49,8 @@ class StatsFragment : Fragment() {
         mRecyclerView.adapter = mCurrentGameAdapter
 
 
-        mStatsFragmentViewModel = ViewModelProvider(mJudgeActivity).get(StatsFragmentViewModel::class.java)
+        mStatsViewModel = ViewModelProvider(mJudgeActivity).get(StatsViewModel::class.java)
+        mNightViewModel = ViewModelProvider(mJudgeActivity).get(NightViewModel::class.java)
 
         return mBinding.root
     }
@@ -58,7 +62,7 @@ class StatsFragment : Fragment() {
             val list = it
             mCurrentGameAdapter.setList(list)
         }
-//        mStatsFragmentViewModel.listCurrentGamePlayerModel.observe(this, mObserverList)
+        mNightViewModel.playersStatsList.observe(this, mObserverList)
     }
 
     fun popupClick(player: CurrentGamePlayerModel) {

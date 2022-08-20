@@ -23,7 +23,7 @@
             android:layout_margin="@dimen/margin_standard"
             android:gravity="center|top"
             android:paddingTop="@dimen/margin_standard"
-            android:text="@string/erase_this_shit_and_go_home"
+            android:text="@string/reset_game_warning"
             android:textSize="35sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

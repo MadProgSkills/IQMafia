@@ -53,7 +53,7 @@ class SlotFragment : Fragment() {
 
 
         mBinding.slotRandomizerButton.setOnClickListener {
-            SlotRandomise()
+            slotRandomise()
         }
 
         mBinding.slotRandomizerButton.setOnLongClickListener(View.OnLongClickListener
@@ -72,7 +72,7 @@ class SlotFragment : Fragment() {
             mPopupWindow.showAtLocation(mBinding.slotFragmentRoot, Gravity.CENTER, 0, 0)
 
             mYesButton.setOnClickListener {
-                ResetOfRandom()
+                resetOfRandom()
                 mPopupWindow.dismiss()
             }
             mNoButton.setOnClickListener {
@@ -88,7 +88,7 @@ class SlotFragment : Fragment() {
 
 
     //RESET SLOT FRAGMENT
-    private fun ResetOfRandom() {
+    private fun resetOfRandom() {
         mSlotIsRandomedBool = true
         mBinding.slotRandomizerButton.setText(R.string.get_slot)
         Randomizer().shuffle(mSlotNumbersArray)
@@ -97,7 +97,7 @@ class SlotFragment : Fragment() {
     }
 
     //SHOW SLOT NUMBERS
-    private fun SlotRandomise() {
+    private fun slotRandomise() {
         if (mCountArrayInt < 10) {
             if (mSlotIsRandomedBool) {
                 mBinding.slotRandomizerButton.setTextSize(170f)
@@ -113,7 +113,7 @@ class SlotFragment : Fragment() {
 
         } else {
             mBinding.slotRandomizerButton.setTextSize(30f)
-            mBinding.slotRandomizerButton.setText(R.string.reset)
+            mBinding.slotRandomizerButton.setText(R.string.reset_hint)
         }
     }
 

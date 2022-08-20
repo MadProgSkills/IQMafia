@@ -14,6 +14,6 @@ interface JudgeDao {
     fun getAllCurrentGamePlayers(): LiveData<List<CurrentGamePlayerModel>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertCurrentGamePlayer(currentGamePlayerModel: CurrentGamePlayerModel)
+    suspend fun insertCurrentGamePlayer(currentGamePlayerModel: CurrentGamePlayerModel)
 
 }

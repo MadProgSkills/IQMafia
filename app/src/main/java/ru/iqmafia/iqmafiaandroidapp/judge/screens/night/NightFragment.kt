@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.transition.TransitionManager
 import android.view.Gravity
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import ru.iqmafia.iqmafiaandroidapp.R
@@ -22,6 +22,7 @@ import ru.iqmafia.iqmafiaandroidapp.judge.JudgeActivity
 import ru.iqmafia.iqmafiaandroidapp.judge.fragments.falls.FallsViewModel
 import ru.iqmafia.iqmafiaandroidapp.judge.fragments.vote.VoteViewModel
 import ru.iqmafia.iqmafiaandroidapp.judge.screeens.night.NightViewModel
+import ru.iqmafia.iqmafiaandroidapp.judge.screens.stats.StatsViewModel
 
 
 class NightFragment : Fragment() {
@@ -32,6 +33,7 @@ class NightFragment : Fragment() {
     private lateinit var mVoteViewModel: VoteViewModel
     private lateinit var mFallsViewModel: FallsViewModel
     private lateinit var mNightViewModel: NightViewModel
+    private lateinit var mStatsViewModel: StatsViewModel
 
     private lateinit var mJudgeActivity: JudgeActivity
 
@@ -51,13 +53,14 @@ class NightFragment : Fragment() {
         mVoteViewModel = ViewModelProvider(mJudgeActivity).get(VoteViewModel::class.java)
         mFallsViewModel = ViewModelProvider(mJudgeActivity).get(FallsViewModel::class.java)
         mNightViewModel = ViewModelProvider(mJudgeActivity).get(NightViewModel::class.java)
+        mStatsViewModel = ViewModelProvider(mJudgeActivity).get(StatsViewModel::class.java)
 
         //BEST MOVE
         val mBestMoveStringObserver = Observer<String> { mBinding.nightBestmoveButton.text = it }
-        mVoteViewModel.mBestMoveTextString.observe(this, mBestMoveStringObserver)
+        mVoteViewModel.mBestMoveTextString.observe(viewLifecycleOwner, mBestMoveStringObserver)
         val mBestMoveDrawableObserver =
             Observer<Drawable> { mBinding.nightBestmoveButton.background = it }
-        mVoteViewModel.mBestMoveButtonDrawable.observe(this, mBestMoveDrawableObserver)
+        mVoteViewModel.mBestMoveButtonDrawable.observe(viewLifecycleOwner, mBestMoveDrawableObserver)
 
 
         mBinding.nightBestmoveButton.setOnClickListener {
@@ -103,6 +106,7 @@ class NightFragment : Fragment() {
                 mVoteViewModel.resetBestMove()
                 mFallsViewModel.resetThisShit()
                 mNightViewModel.resetFlags()
+
 
                 mPopupWindow.dismiss()
             }
@@ -176,178 +180,143 @@ class NightFragment : Fragment() {
 
 
         mSelectBlack1Button.setOnClickListener {
-            when (mNightViewModel.flagBlack1Button) {
-                false -> {
+            if (!mNightViewModel.flagBlack1Button) {
                     mNightViewModel.flagBlack1Button = true
                     mSelectBlack1Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
-                }
-                true -> {
+                } else {
                     mNightViewModel.flagBlack1Button = false
                     mSelectBlack1Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("1")
         }
 
 
         mSelectBlack2Button.setOnClickListener {
-            when (mNightViewModel.flagBlack2Button) {
-                false -> {
+            if (!mNightViewModel.flagBlack2Button) {
                     mNightViewModel.flagBlack2Button = true
                     mSelectBlack2Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
                 }
-                true -> {
+                else {
                     mNightViewModel.flagBlack2Button = false
                     mSelectBlack2Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("2")
         }
 
 
         mSelectBlack3Button.setOnClickListener {
-            when (mNightViewModel.flagBlack3Button) {
-                false -> {
-                    mNightViewModel.flagBlack3Button = true
-                    mSelectBlack3Button.background =
-                        AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
-                }
-                true -> {
+            if (!mNightViewModel.flagBlack3Button) {
+
+                mNightViewModel.flagBlack3Button = true
+                mSelectBlack3Button.background =
+                    AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
+            } else {
                     mNightViewModel.flagBlack3Button = false
                     mSelectBlack3Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("3")
         }
 
 
         mSelectBlack4Button.setOnClickListener {
-
-            when (mNightViewModel.flagBlack4Button) {
-                false -> {
+            if (!mNightViewModel.flagBlack4Button) {
                     mNightViewModel.flagBlack4Button = true
                     mSelectBlack4Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
-                }
-                true -> {
+                } else {
                     mNightViewModel.flagBlack4Button = false
                     mSelectBlack4Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("4")
         }
 
 
         mSelectBlack5Button.setOnClickListener {
-
-            when (mNightViewModel.flagBlack5Button) {
-                false -> {
+            if (!mNightViewModel.flagBlack5Button) {
                     mNightViewModel.flagBlack5Button = true
                     mSelectBlack5Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
-                }
-                true -> {
+                } else {
                     mNightViewModel.flagBlack5Button = false
                     mSelectBlack5Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("5")
         }
 
 
         mSelectBlack6Button.setOnClickListener {
-
-            when (mNightViewModel.flagBlack6Button) {
-                false -> {
+            if (!mNightViewModel.flagBlack6Button) {
                     mNightViewModel.flagBlack6Button = true
                     mSelectBlack6Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
-                }
-                true -> {
+                } else {
                     mNightViewModel.flagBlack6Button = false
                     mSelectBlack6Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("6")
         }
 
 
         mSelectBlack7Button.setOnClickListener {
-
-            when (mNightViewModel.flagBlack7Button) {
-                false -> {
+            if (!mNightViewModel.flagBlack7Button) {
                     mNightViewModel.flagBlack7Button = true
                     mSelectBlack7Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
-                }
-                true -> {
+                } else {
                     mNightViewModel.flagBlack7Button = false
                     mSelectBlack7Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("7")
         }
 
 
         mSelectBlack8Button.setOnClickListener {
-
-            when (mNightViewModel.flagBlack8Button) {
-                false -> {
+            if (!mNightViewModel.flagBlack8Button) {
                     mNightViewModel.flagBlack8Button = true
                     mSelectBlack8Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
-                }
-                true -> {
+                } else {
                     mNightViewModel.flagBlack8Button = false
                     mSelectBlack8Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("8")
         }
 
 
         mSelectBlack9Button.setOnClickListener {
-
-            when (mNightViewModel.flagBlack9Button) {
-                false -> {
+            if (!mNightViewModel.flagBlack9Button) {
                     mNightViewModel.flagBlack9Button = true
                     mSelectBlack9Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
-                }
-                true -> {
+                } else {
                     mNightViewModel.flagBlack9Button = false
                     mSelectBlack9Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("9")
         }
 
 
         mSelectBlack10Button.setOnClickListener {
-
-            when (mNightViewModel.flagBlack10Button) {
-                false -> {
+            if (!mNightViewModel.flagBlack10Button) {
                     mNightViewModel.flagBlack10Button = true
                     mSelectBlack10Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_black)
-                }
-                true -> {
+                } else {
                     mNightViewModel.flagBlack10Button = false
                     mSelectBlack10Button.background =
                         AppCompatResources.getDrawable(mJudgeActivity, R.drawable.my_border_white)
                 }
-            }
             mNightViewModel.setCardToBlack("10")
         }
 
@@ -788,12 +757,12 @@ class NightFragment : Fragment() {
         //CONFIRM
         mConfirmButton.setOnClickListener {
 
-            if (mNightViewModel.name1String.value!!.isNotEmpty()
-                && mNightViewModel.name2String.value!!.isNotEmpty() &&
-                mNightViewModel.name3String.value!!.isNotEmpty() && mNightViewModel.name4String.value!!.isNotEmpty() &&
-                mNightViewModel.name5String.value!!.isNotEmpty() && mNightViewModel.name6String.value!!.isNotEmpty() &&
-                mNightViewModel.name7String.value!!.isNotEmpty() && mNightViewModel.name8String.value!!.isNotEmpty() &&
-                mNightViewModel.name9String.value!!.isNotEmpty() && mNightViewModel.name10String.value!!.isNotEmpty()
+            if (!mNightViewModel.name1String.value.isNullOrEmpty()
+                && !mNightViewModel.name2String.value.isNullOrEmpty() &&
+                !mNightViewModel.name3String.value.isNullOrEmpty() && !mNightViewModel.name4String.value.isNullOrEmpty() &&
+                !mNightViewModel.name5String.value.isNullOrEmpty() && !mNightViewModel.name6String.value.isNullOrEmpty() &&
+                !mNightViewModel.name7String.value.isNullOrEmpty() && !mNightViewModel.name8String.value.isNullOrEmpty() &&
+                !mNightViewModel.name9String.value.isNullOrEmpty() && !mNightViewModel.name10String.value.isNullOrEmpty()
             ) {
                 //TODO: создание модели игры
                 mNightViewModel.setTeam()

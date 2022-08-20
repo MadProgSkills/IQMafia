@@ -9,10 +9,12 @@ class JudgeRoomRepository(private val judgeDao: JudgeDao): JudgeRepository {
 
     override suspend fun insertCurrentGamePlayer(
         player: CurrentGamePlayerModel,
-        onSuccess: () -> Unit
     ) {
         judgeDao.insertCurrentGamePlayer(player)
-        onSuccess()
+    }
+
+    override fun getAllCurrentGamePlayers(): LiveData<List<CurrentGamePlayerModel>> {
+        TODO("Not yet implemented")
     }
 
 

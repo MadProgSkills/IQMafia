@@ -109,7 +109,7 @@ class CardFragment : Fragment() {
             mBinding.cardRandomiserButton.setBackgroundResource(R.color.colorCoolBlue)
             mBinding.cardRandomiserButton.setTextColor(resources.getColor(android.R.color.black))
             mBinding.cardRandomiserButton.setText(
-                "Long Press\n (Key Vol Down)\n to Reset\n" +
+                resources.getString(R.string.reset_hint) +
                         "\n1 = ${mCardRandomiseCompleteArray[0]}" +
                         "\n2 = ${mCardRandomiseCompleteArray[1]}" +
                         "\n3 = ${mCardRandomiseCompleteArray[2]}" +

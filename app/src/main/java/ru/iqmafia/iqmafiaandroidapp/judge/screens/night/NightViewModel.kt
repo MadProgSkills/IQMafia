@@ -7,15 +7,17 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import ru.iqmafia.iqmafiaandroidapp.judge.database.IqDatabase
-import ru.iqmafia.iqmafiaandroidapp.judge.database.JudgeRoomRepository
 import ru.iqmafia.iqmafiaandroidapp.judge.models.CurrentGamePlayerModel
 
 class NightViewModel(application: Application) : AndroidViewModel(application) {
 
     private val mContext = application
-//    private val mDao = IqDatabase.getInstance(mContext).getDao()
+//    private val mDB = IqDatabase.getInstance(mContext)
+//    private val mDao = mDB.getDao()
 //    private val mRepo = JudgeRoomRepository(mDao)
+
+    private var _playersStatsList = MutableLiveData<List<CurrentGamePlayerModel>>()
+    val playersStatsList: LiveData<List<CurrentGamePlayerModel>> get() = _playersStatsList
 
     //WHO WIN
     private var _whoWinString = MutableLiveData<String>()
@@ -738,6 +740,8 @@ class NightViewModel(application: Application) : AndroidViewModel(application) {
         flagSher8Button = false
         flagSher9Button = false
         flagSher10Button = false
+
+        _playersStatsList.value = emptyList()
     }
 
 
@@ -745,97 +749,70 @@ class NightViewModel(application: Application) : AndroidViewModel(application) {
     //WIN BOOL TO STRING??!!
     //INSERTS
     fun insert10Players() {
-        insertCurrentGamePlayer(
+        val insertList: List<CurrentGamePlayerModel> = listOf(
             CurrentGamePlayerModel(
                 slot = 1,
                 name = name1String.value.toString(),
                 card = card1String.value.toString(),
                 win = if (whoWinString.value == team1String.value) "win" else "loose",
                 rating = rating1Double.value!!.toDouble()
-            )
-        ) {}
-
-        insertCurrentGamePlayer(
+            ),
             CurrentGamePlayerModel(
                 slot = 2,
                 name = name2String.value.toString(),
                 card = card2String.value.toString(),
                 win = if (whoWinString.value == team2String.value) "win" else "loose",
                 rating = rating2Double.value!!.toDouble()
-            )
-        ) {}
-
-        insertCurrentGamePlayer(
+            ),
             CurrentGamePlayerModel(
                 slot = 3,
                 name = name3String.value.toString(),
                 card = card3String.value.toString(),
                 win = if (whoWinString.value == team3String.value) "win" else "loose",
                 rating = rating3Double.value!!.toDouble()
-            )
-        ) {}
-
-        insertCurrentGamePlayer(
+            ),
             CurrentGamePlayerModel(
                 slot = 4,
                 name = name4String.value.toString(),
                 card = card4String.value.toString(),
                 win = if (whoWinString.value == team4String.value) "win" else "loose",
                 rating = rating4Double.value!!.toDouble()
-            )
-        ) {}
-
-        insertCurrentGamePlayer(
+            ),
             CurrentGamePlayerModel(
                 slot = 5,
                 name = name5String.value.toString(),
                 card = card5String.value.toString(),
                 win = if (whoWinString.value == team5String.value) "win" else "loose",
                 rating = rating5Double.value!!.toDouble()
-            )
-        ) {}
-
-        insertCurrentGamePlayer(
+            ),
             CurrentGamePlayerModel(
                 slot = 6,
                 name = name6String.value.toString(),
                 card = card6String.value.toString(),
                 win = if (whoWinString.value == team6String.value) "win" else "loose",
                 rating = rating6Double.value!!.toDouble()
-            )
-        ) {}
-
-        insertCurrentGamePlayer(
+            ),
             CurrentGamePlayerModel(
                 slot = 7,
                 name = name7String.value.toString(),
                 card = card7String.value.toString(),
                 win = if (whoWinString.value == team7String.value) "win" else "loose",
                 rating = rating7Double.value!!.toDouble()
-            )
-        ) {}
-
-        insertCurrentGamePlayer(
+            ),
             CurrentGamePlayerModel(
                 slot = 8,
                 name = name8String.value.toString(),
                 card = card8String.value.toString(),
                 win = if (whoWinString.value == team8String.value) "win" else "loose",
                 rating = rating8Double.value!!.toDouble()
-            )
-        ) {}
-
-        insertCurrentGamePlayer(
+            ),
             CurrentGamePlayerModel(
                 slot = 9,
                 name = name9String.value.toString(),
                 card = card9String.value.toString(),
                 win = if (whoWinString.value == team9String.value) "win" else "loose",
                 rating = rating9Double.value!!.toDouble()
-            )
-        ) {}
-
-        insertCurrentGamePlayer(
+            ),
             CurrentGamePlayerModel(
                 slot = 10,
                 name = name10String.value.toString(),
@@ -843,13 +820,13 @@ class NightViewModel(application: Application) : AndroidViewModel(application) {
                 win = if (whoWinString.value == team10String.value) "win" else "loose",
                 rating = rating10Double.value!!.toDouble()
             )
-        ) {}
+        )
+
+        _playersStatsList.value = insertList
     }
 
-    private fun insertCurrentGamePlayer(player: CurrentGamePlayerModel, onSuccess: () -> Unit) =
+    private fun insertCurrentGamePlayer(player: CurrentGamePlayerModel) =
         viewModelScope.launch(Dispatchers.IO) {
-//            mRepo.insertCurrentGamePlayer(player) {
-//                onSuccess()
-//            }
+//            mRepo.insertCurrentGamePlayer(player)
         }
 }

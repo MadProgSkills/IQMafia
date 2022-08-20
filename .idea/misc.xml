@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/tab_indicator.xml" value="0.2203125" />
         <entry key="app/src/main/res/layout/activity_judge.xml" value="0.20520833333333333" />
+        <entry key="app/src/main/res/layout/fragment_card.xml" value="0.1" />
       </map>
     </option>
   </component>
