@@ -79,7 +79,7 @@ class NamesFragment : Fragment() {
             mBinding.namesName10Edit.text.toString()
         )
 
-            mNightViewModel.setNames(namesList)
+        mNightViewModel.setNames(namesList)
         super.onPause()
     }
 

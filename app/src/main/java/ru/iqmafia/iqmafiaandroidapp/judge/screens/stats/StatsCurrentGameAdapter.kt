@@ -71,6 +71,7 @@ class StatsCurrentGameAdapter : RecyclerView.Adapter<StatsCurrentGameAdapter.SCG
             else -> AppCompatResources.getDrawable(mContext, R.drawable.my_border_white)
         }
 
+        holder.rating.keyListener
     //TODO:: text listener
 //        holder.rating.addTextChangedListener(beforeTextChanged = , onTextChanged = ,afterTextChanged = )
 

@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayoutMediator
 import ru.iqmafia.iqmafiaandroidapp.R
@@ -28,9 +29,9 @@ class JudgeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _mBinding = ActivityJudgeBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         initialization()
-
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -83,7 +84,6 @@ class JudgeActivity : AppCompatActivity() {
         }
         return true
     }
-
 
     override fun onDestroy() {
         _mBinding = null

@@ -89,5 +89,6 @@
     <string name="card">Card</string>
     <string name="slot">Slot</string>
     <string name="end">End</string>
+    <string name="help">Help</string>
 
 </resources>
