@@ -468,7 +468,9 @@
             android:stateListAnimator="@drawable/button_animation"
             app:layout_constraintEnd_toStartOf="@+id/falls_frag"
             app:layout_constraintStart_toEndOf="@+id/day_result_linear"
-            app:layout_constraintTop_toBottomOf="@+id/day_vote_reset_button" />
+            app:layout_constraintTop_toBottomOf="@+id/day_vote_reset_button"
+            android:visibility="gone"
+            tools:visibility="visible"/>
 
 
 

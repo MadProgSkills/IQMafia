@@ -11,23 +11,28 @@
         android:roundIcon="@mipmap/iq_ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ads.AdsActivity"/>
-        <activity android:name=".main.activities.AuthActivity" />
+        <activity android:name=".ads.AdsActivity"
+            android:exported="false" />
+        <activity android:name=".main.activities.AuthActivity"
+            android:exported="false" />
         <activity
             android:name=".main.activities.SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.activities.MainActivity">
+        <activity android:name=".main.activities.MainActivity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".judge.JudgeActivity"/>
+        <activity android:name=".judge.JudgeActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>

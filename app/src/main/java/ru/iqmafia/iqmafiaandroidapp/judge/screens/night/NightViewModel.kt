@@ -200,31 +200,7 @@ class NightViewModel(application: Application) : AndroidViewModel(application) {
 
 
     init {
-        _whoWinString.value = ""
-
-        _card1String.value = "rd"
-        _card2String.value = "rd"
-        _card3String.value = "rd"
-        _card4String.value = "rd"
-        _card5String.value = "rd"
-        _card6String.value = "rd"
-        _card7String.value = "rd"
-        _card8String.value = "rd"
-        _card9String.value = "rd"
-        _card10String.value = "rd"
-
-        _team1String.value = ""
-        _team2String.value = ""
-        _team3String.value = ""
-        _team4String.value = ""
-        _team5String.value = ""
-        _team6String.value = ""
-        _team7String.value = ""
-        _team8String.value = ""
-        _team9String.value = ""
-        _team10String.value = ""
-
-
+        resetCards()
         resetRating()
         resetNames()
     }
@@ -742,6 +718,32 @@ class NightViewModel(application: Application) : AndroidViewModel(application) {
         flagSher10Button = false
 
         _playersStatsList.value = emptyList()
+    }
+
+    fun resetCards() {
+        _whoWinString.value = ""
+
+        _card1String.value = "rd"
+        _card2String.value = "rd"
+        _card3String.value = "rd"
+        _card4String.value = "rd"
+        _card5String.value = "rd"
+        _card6String.value = "rd"
+        _card7String.value = "rd"
+        _card8String.value = "rd"
+        _card9String.value = "rd"
+        _card10String.value = "rd"
+
+        _team1String.value = ""
+        _team2String.value = ""
+        _team3String.value = ""
+        _team4String.value = ""
+        _team5String.value = ""
+        _team6String.value = ""
+        _team7String.value = ""
+        _team8String.value = ""
+        _team9String.value = ""
+        _team10String.value = ""
     }
 
 

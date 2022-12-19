@@ -101,12 +101,13 @@ class NightFragment : Fragment() {
             val mNoButton: Button = mPopupView.findViewById(R.id.game_reset_popup_no_button)
 
             mYesButton.setOnClickListener {
-                mNightViewModel.resetNames()
                 mVoteViewModel.resetThisShit()
                 mVoteViewModel.resetBestMove()
                 mFallsViewModel.resetThisShit()
                 mNightViewModel.resetFlags()
-
+                mNightViewModel.resetRating()
+                mNightViewModel.resetNames()
+                mNightViewModel.resetCards()
 
                 mPopupWindow.dismiss()
             }
